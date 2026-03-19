@@ -19,8 +19,8 @@
 1. **Fork 仓库** - 点击 GitHub 上的 Fork 按钮
 2. **克隆您的 Fork**
    ```bash
-   git clone https://github.com/YOUR_USERNAME/datasec-hub.git
-   cd datasec-hub
+   git clone https://github.com/sermilan/hubgo.git
+   cd hubgo
    ```
 3. **创建分支**
    ```bash
@@ -79,7 +79,7 @@
 
 ## 问题反馈
 
-- GitHub Issues: [提交 Issue](https://github.com/YOUR_USERNAME/datasec-hub/issues)
+- GitHub Issues: [提交 Issue](https://github.com/sermilan/hubgo/issues)
 - 邮件: contact@datasec-hub.com
 
 ## 行为准则

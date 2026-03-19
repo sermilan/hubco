@@ -3,7 +3,7 @@
 <div align="center">
 
 ![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)
-![License](https://img.shields.io/badge/license-Apache--2.0-blue.svg)
+![License](https://img.shields.io/badge/license-GPL--2.0-blue.svg)
 ![Platform](https://img.shields.io/badge/platform-Web-orange.svg)
 ![React](https://img.shields.io/badge/React-18.3-61DAFB.svg?logo=react)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6.svg?logo=typescript)
@@ -169,8 +169,8 @@ NestJS + TypeScript
 
 ```bash
 # Clone repository
-git clone https://github.com/YOUR_USERNAME/datasec-hub.git
-cd datasec-hub
+git clone https://github.com/sermilan/hubgo.git
+cd hubgo
 
 # Install dependencies
 npm install
@@ -193,7 +193,7 @@ npm run build
 ## 📁 Project Structure
 
 ```
-datasec-hub/
+hubgo/
 ├── src/
 │   ├── app/
 │   │   ├── pages/              # Page components
@@ -238,7 +238,7 @@ We welcome contributions! Please see [CONTRIBUTING.md](./CONTRIBUTING.md) for gu
 
 ## 📝 License
 
-This project is licensed under the Apache License 2.0 - see [LICENSE](./LICENSE) file.
+This project is licensed under the GPL-2.0 License - see [LICENSE](./LICENSE) file.
 
 ## 🙏 Acknowledgments
 

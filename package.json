@@ -1,8 +1,14 @@
 {
-  "name": "@figma/my-make-file",
-  "private": true,
-  "version": "0.0.1",
+  "name": "hubgo",
+  "private": false,
+  "version": "1.0.0",
+  "description": "数据安全合规知识服务平台 - DataSec Hub",
   "type": "module",
+  "license": "GPL-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sermilan/hubgo.git"
+  },
   "scripts": {
     "build": "vite build",
     "dev": "vite",

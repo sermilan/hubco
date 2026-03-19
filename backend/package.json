@@ -1,10 +1,10 @@
 {
-  "name": "backend",
-  "version": "0.0.1",
-  "description": "",
-  "author": "",
-  "private": true,
-  "license": "UNLICENSED",
+  "name": "hubgo-backend",
+  "version": "1.0.0",
+  "description": "DataSec Hub 后端服务",
+  "author": "sermilan",
+  "private": false,
+  "license": "GPL-2.0",
   "scripts": {
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
