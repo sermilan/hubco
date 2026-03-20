@@ -260,49 +260,64 @@ hubco/
 
 ## 🚀 快速开始
 
-### 方式一：完整启动（前后端）
+### 方式一：一键 Docker 部署（推荐生产环境）
+
+> 前提：服务器已安装 Docker（未安装请执行 `curl -fsSL https://get.docker.com | bash`）
 
 ```bash
 # 1. 克隆项目
-git clone https://github.com/sermilan/hubco.git
-cd hubgo
+git clone https://github.com/sermilan/hubgo.git
+cd hubgo/数据安全政策检索中心
 
-# 2. 启动依赖服务（PostgreSQL + Redis + Elasticsearch）
-cd backend && docker-compose up -d && cd ..
-
-# 3. 启动后端
-cd backend
-npm install
-cp .env.example .env  # 编辑 .env 配置数据库连接
-npm run start:dev &
-cd ..
-
-# 4. 启动前端
-npm install
-npm run dev
-
-# 访问应用
-# 前端 http://localhost:5173
-# 后端 API http://localhost:3000
-# API 文档 http://localhost:3000/api
+# 2. 一键部署
+bash deploy.sh
 ```
 
-### 方式二：仅启动前端（Mock数据模式）
+部署完成后访问：
+- **前端**: `http://YOUR_SERVER_IP`
+- **后端 API**: `http://YOUR_SERVER_IP/api`
+- **Swagger 文档**: `http://YOUR_SERVER_IP:3000/api/docs`
 
-如果不需要后端，可以使用Mock数据进行开发演示：
+> ⚠️ 首次部署需下载 Elasticsearch 镜像（约 680MB），请确保服务器有足够网络带宽，预计需要 10-20 分钟。
+
+### 方式二：本地开发（前端 Mock 模式）
+
+无需后端，用于快速预览 UI：
 
 ```bash
-# 克隆项目
-git clone https://github.com/sermilan/hubco.git
-cd hubgo
+git clone https://github.com/sermilan/hubgo.git
+cd hubgo/数据安全政策检索中心
 
-# 安装依赖
-npm install
-
-# 启动开发服务器（使用Mock数据）
-npm run dev
+# 使用 pnpm（推荐）
+npm install -g pnpm
+pnpm install
+pnpm dev
 
 # 访问 http://localhost:5173
+```
+
+### 方式三：本地开发（前后端联调）
+
+```bash
+git clone https://github.com/sermilan/hubgo.git
+cd hubgo/数据安全政策检索中心
+
+# 1. 启动基础设施
+cd backend && docker compose up -d && cd ..
+
+# 2. 启动后端
+cd backend
+pnpm install
+cp .env.example .env   # 按需编辑 .env
+pnpm start:dev &
+cd ..
+
+# 3. 启动前端（连接真实后端）
+pnpm install
+VITE_USE_MOCK_API=false pnpm dev
+
+# 前端: http://localhost:5173
+# API文档: http://localhost:3000/api/docs
 ```
 
 ### 方式三：查看文档
